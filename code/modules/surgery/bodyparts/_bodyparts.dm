@@ -100,7 +100,7 @@
 
 /obj/item/bodypart/proc/get_specific_markings_overlays(list/specific_markings, aux = FALSE, mob/living/carbon/human/human_owner, override_color)
 	var/list/appearance_list = list()
-	var/specific_layer = aux ? aux_layer : BODYPARTS_LAYER
+	var/specific_layer = aux_layer ? aux_layer : BODYPARTS_LAYER
 	var/specific_render_zone = aux ? aux_zone : body_zone
 	for(var/key in specific_markings)
 		var/color = specific_markings[key]
@@ -607,7 +607,7 @@
 		if(aux_zone)
 			if(!hideaux)
 				//Prosthetic arms do not have additional hand icons on them, because of this they do not render above clothing, this is why aux image uses body_zone var instead of aux_zone//
-				aux = image(limb.icon, "[prosthetic_prefix]_[body_zone]", -aux_layer, image_dir)
+				aux = image(limb.icon, "[prosthetic_prefix]_[aux_zone]", -aux_layer, image_dir)
 				. += aux
 
 	var/override_color = null
