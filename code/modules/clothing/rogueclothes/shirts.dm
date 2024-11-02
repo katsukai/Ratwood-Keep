@@ -151,14 +151,14 @@
 	fiber_salvage = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/tunic
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "tunic"
 	desc = ""
-	body_parts_covered = CHEST|GROIN|VITALS
+	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	boobed = FALSE
 	icon_state = "tunic"
 	item_state = "undershirt"
-	sleevetype = "tunic"
+	sleevetype = "shirt"
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	flags_inv = HIDECROTCH|HIDEBOOB
@@ -237,7 +237,7 @@
 	. = ..()
 	color = pick("#e6e5e5", "#52BE80", "#C39BD3", "#EC7063","#5DADE2")
 
-// 
+//
 //   Velvet Dress
 //
 
@@ -261,7 +261,7 @@
 	. = ..()
 	color = pick("#e6e5e5", "#52BE80", "#C39BD3", "#EC7063","#5DADE2")
 
-// 
+//
 //   Noble dress
 //
 
